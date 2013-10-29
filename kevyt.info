@@ -1,0 +1,24 @@
+name = Kevyt
+description = Empty kevyt starter theme
+screenshot = screenshot.png
+version = 1.0
+core = 7.x
+
+; --------------------------------------------------------------------------
+; Regions.
+; --------------------------------------------------------------------------
+
+regions[header] = Header
+regions[primary_navigation] = Primary navigation
+regions[sidebar_first] = Sidebar first
+regions[sidebar_second] = Sidebar second
+regions[highlighted] = Highlighted
+regions[content] = Content
+regions[footer] = Footer
+
+;-------------- js -------------
+scripts[] = drupal/js/scripts.js
+
+breakpoints[all] = (min-width: 0em)
+breakpoints[small] = (min-width: 35em)
+breakpoints[large] = (min-width: 55em)

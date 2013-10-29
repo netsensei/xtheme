@@ -1,0 +1,12 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore NetBeans, Eclipse && phpstorm
+nbproject
+.project
+.settings
+.idea
+
+# Ignore sass-cache files.
+*.sass-cache*
