@@ -30,7 +30,7 @@ module.exports = function (grunt) {
         files: ['./img/**/*']
       },
       css:{
-        files: ['/sass/**/*.scss'],
+        files: ['./sass/**/*.scss'],
         tasks: ['compass']
       }
     },
