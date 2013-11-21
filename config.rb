@@ -2,6 +2,7 @@
 require 'susy'
 require 'toolkit'
 require 'respond-to'
+require 'compass-normalize'
 
 # Output extra info for sourcemaps, now you see the scss info in the inspector.
 sass_options = (environment == :development) ? { :debug_info => true } : {}

@@ -5,13 +5,14 @@
  *
  * This file is compiled into style.css
  */
-
+@import 'base/variables';
 /* ---------- Compass Extensions ---------- */
-@import 'base/logic/variables';
-
 @import 'toolkit';
 @import 'susy';
 @import 'respond-to';
+@import 'compass/css3';
+@import 'compass/reset';
+@import "normalize";
 
 // Turn off media-query output for IE-only stylesheets.
 // $breakpoint-media-output: <boolean>;
@@ -22,22 +23,14 @@ $breakpoint-media-output: true;
 $breakpoint-ie-output: false;
 
 /* ---------- Import base ---------- */
-
-@import 'base/logic/functions';
-
-@import 'base/logic/mixins';
-@import 'base/logic/normalize';
-
-@import 'base/logic/extendables';
-
-@import 'base/layout';
+@import 'base/functions';
+@import 'base/mixins';
+@import 'base/extendables';
 @import 'base/typography';
-@import 'base/design';
-
+/* ---------- Import design ---------- */
+@import 'design/design';
 /* ---------- Import styles ---------- */
 
 @import 'styles/styles';
 
-/* ---------- Import features ---------- */
 
-@import 'features/features';
