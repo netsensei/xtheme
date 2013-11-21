@@ -10,3 +10,8 @@ nbproject
 
 # Ignore sass-cache files.
 *.sass-cache*
+
+# Node stuff
+.grunt
+npm-debug.log
+node_modules
