@@ -4,21 +4,13 @@
  * Provides overrides and additions to aid the theme.
  */
 
-/**
- * Implements hook_form_FORM_ID_alter().
- *
- * Adds a placeholder to the search block.
- */
-function kevyt_form_search_block_form_alter(&$form, &$form_state, $form_id) {
-  $form['search_block_form']['#attributes']['placeholder'] = t('Search…');
-}
 
 /**
  * Implements hook_css_alter().
  *
  * Remove all the unused css files.
  */
-function kevyt_css_alter(&$css) {
+function xtheme_css_alter(&$css) {
 
   /* Remove some default Drupal css */
   $exclude = array(

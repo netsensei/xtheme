@@ -45,7 +45,7 @@
  * @link http://api.drupal.org/api/drupal/modules--system--html.tpl.php/7
  *
  */
-$theme_path = drupal_get_path('theme', 'kevyt');
+$theme_path = drupal_get_path('theme', 'xtheme');
 ?>
 <!doctype html>
 <!--[if IEMobile 7]><html class="ie iem7" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"><![endif]-->
