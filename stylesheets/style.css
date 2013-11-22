@@ -14,23 +14,28 @@
  * By default comppass generates fallbacks for all IE > 6, here you can override these settings.
  * @link http://compass-style.org/reference/compass/support/
  */
-/* Font stuff */
 /**
  * Grid settings
  *
  * Set your base-font-size in typography.scss
  * Calculate your grid settings based on your base-font-size
  * Calculate your em's online: pxtoem.com
- *
- * Ex: 12 col 960px
- * Total:   960px = 60em
+ * 
+ * Ex: 12 col 960px 
+ * Total:   960px = 60em          
  * Columns: 60px = 3.750em                    (x12  = 45em)
  * Gutters: 20px = 1.250em                    (x11  = 13.75em)
  * Grid padding: 10px = $gutter-width/2;      (x2   = 1.250em)
  *                                            ----------------
- *                                                    60em
+ *                                                    60em      
  */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/base\/_variables\.scss}line{font-family:\0000348}}
+html {
+  width: generateSusyGridColumn(960, 12);
+}
+
 /* Breakpoints */
+/* Font stuff */
 /* ---------- Compass Extensions ---------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/\.rvm\/gems\/ruby-1\.9\.3-p385\/gems\/toolkit-1\.3\.8\/stylesheets\/toolkit\/_box-sizing\.scss}line{font-family:\0000336}}
 *, *:after, *:before {
@@ -497,55 +502,61 @@ h6 {
   clear: both;
 }
 
+@media (min-width: 35em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000320}}
-.lt-ie9 .one-sidebar.sidebar-first .main {
-  width: 74.46809%;
-  float: right;
-  margin-right: 0;
-}
+  .one-sidebar.sidebar-first .main {
+    width: 74.46809%;
+    float: right;
+    margin-right: 0;
+  }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000325}}
-.lt-ie9 .one-sidebar.sidebar-second .main {
-  width: 74.46809%;
-  float: left;
-  margin-right: 2.12766%;
-}
+  .one-sidebar.sidebar-second .main {
+    width: 74.46809%;
+    float: left;
+    margin-right: 2.12766%;
+  }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000330}}
-.lt-ie9 .one-sidebar aside.sidebar_first {
-  width: 23.40426%;
-  float: left;
-  margin-right: 2.12766%;
-}
+  .one-sidebar aside.sidebar_first {
+    width: 23.40426%;
+    float: left;
+    margin-right: 2.12766%;
+  }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000333}}
-.lt-ie9 .one-sidebar aside.sidebar_second {
-  width: 23.40426%;
-  float: right;
-  margin-right: 0;
+  .one-sidebar aside.sidebar_second {
+    width: 23.40426%;
+    float: right;
+    margin-right: 0;
+  }
 }
 
+@media (min-width: 35em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000342}}
-.lt-ie9 .two-sidebars .main {
-  width: 48.93617%;
-  float: left;
-  margin-right: 2.12766%;
-}
+  .two-sidebars .main {
+    width: 48.93617%;
+    float: left;
+    margin-right: 2.12766%;
+  }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000345}}
-.lt-ie9 .two-sidebars .sidebar_first {
-  width: 23.40426%;
-  float: left;
-  margin-right: 2.12766%;
-}
+  .two-sidebars .sidebar_first {
+    width: 23.40426%;
+    float: left;
+    margin-right: 2.12766%;
+  }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000348}}
-.lt-ie9 .two-sidebars .sidebar_second {
-  width: 23.40426%;
-  float: right;
-  margin-right: 0;
+  .two-sidebars .sidebar_second {
+    width: 23.40426%;
+    float: right;
+    margin-right: 0;
+  }
 }
 
+@media (min-width: 35em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000356}}
-.lt-ie9 .no-sidebars .main {
-  width: 100%;
-  float: right;
-  margin-right: 0;
+  .no-sidebars .main {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_navigation\.scss}line{font-family:\000032}}

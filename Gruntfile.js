@@ -54,11 +54,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Task aliases and tasks
-  grunt.registerTask('preview', [
-    'connect',
-    'watch'
-  ]);
-  grunt.registerTask('w', [
+  grunt.registerTask('serve', [
     'connect',
     'watch'
   ]);

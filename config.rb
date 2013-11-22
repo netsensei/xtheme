@@ -5,7 +5,7 @@ require 'respond-to'
 require 'compass-normalize'
 
 # Output extra info for sourcemaps, now you see the scss info in the inspector.
-sass_options = (environment == :development) ? { :debug_info => true } : {}
+sass_options = {:debug_info => true, :quiet => false}
 # Don't default to DEV settings. Instead, use "compass compile -e development" (defaults to production output)
 
 # Set this to the root of your project when deployed:
@@ -17,7 +17,7 @@ javascripts_dir = "js"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
-output_style = (environment == :development) ? :expanded : :compressed
+output_style = :expanded
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
 relative_assets = true

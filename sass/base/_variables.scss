@@ -5,6 +5,7 @@
  */
 
 $base-text-color: #333;
+
 $base-selected-text-color: invert($base-text-color);
 $base-selected-text-background-color: $base-text-color;
 
@@ -13,44 +14,16 @@ $base-link-hover-color: #DF006E;
 
 
 /**
- * Variables
+ * IE fallback support
  *
- * All general variables should be set here.
+ * By default comppass generates fallbacks for all IE > 6, here you can override these settings.
+ * @link http://compass-style.org/reference/compass/support/
  */
-
 
 $legacy-support-for-ie: true;
 $legacy-support-for-ie6: false;
 $legacy-support-for-ie7: false;
 $legacy-support-for-ie8: true;
-
-
-/**
- * Grid settings
- *
- * Set your base-font-size in typography.scss
- * Calculate your grid settings based on your base-font-size
- * Calculate your em's online: pxtoem.com
- * 
- * Ex: 12 col 960px 
- * Total:   960px = 60em          
- * Columns: 60px = 3.750em                    (x12  = 45em)
- * Gutters: 20px = 1.250em                    (x11  = 13.75em)
- * Grid padding: 10px = $gutter-width/2;      (x2   = 1.250em)
- *                                            ----------------
- *                                                    60em      
- */
-
-$total-columns: 12;
-$column-width: 3.750em;
-$gutter-width: 1.250em;
-$grid-padding: $gutter-width/2;
-
-
-/* Breakpoints */
-
-$breakpoint_1: 35em lt-ie9;
-$breakpoint_2: 55em lt-ie9;
 
 /* Font stuff */
 $base-font-size: 16px;
@@ -58,9 +31,35 @@ $base-line-height: 24px;
 $base-font-family: Helvetica, Arial, sans-serif;
 
 // The font sizes for h1-h6.
-$h1-font-size: 2    * $base-font-size !default;
-$h2-font-size: 1.5  * $base-font-size !default;
-$h3-font-size: 1.17 * $base-font-size !default;
-$h4-font-size: 1    * $base-font-size !default;
-$h5-font-size: 0.83 * $base-font-size !default;
-$h6-font-size: 0.75 * $base-font-size !default;
+$h1-font-size: 2    * $base-font-size;
+$h2-font-size: 1.5  * $base-font-size;
+$h3-font-size: 1.17 * $base-font-size;
+$h4-font-size: 1    * $base-font-size;
+$h5-font-size: 0.83 * $base-font-size;
+$h6-font-size: 0.75 * $base-font-size;
+
+/**
+ * Grid settings
+ *
+ * Set your base-font-size in typography.scss
+ * Calculate your grid settings based on your base-font-size
+ * Calculate your em's online: pxtoem.com
+ *
+ * Ex: 12 col 960px
+ * Total:   960px = 60em
+ * Columns: 60px = 3.750em                    (x12  = 45em)
+ * Gutters: 20px = 1.250em                    (x11  = 13.75em)
+ * Grid padding: 10px = $gutter-width/2;      (x2   = 1.250em)
+ *                                            ----------------
+ *                                                    60em
+ */
+
+$total-columns: 12;
+$column-width: 3.750em;
+$gutter-width: 1.25em;
+$grid-padding: $gutter-width/2;
+
+/* Breakpoints */
+
+$breakpoint_1: 35em lt-ie9;
+$breakpoint_2: 55em lt-ie9;

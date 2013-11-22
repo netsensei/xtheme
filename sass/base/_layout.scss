@@ -55,49 +55,6 @@ header, footer, .main {
   @include at-breakpoint($breakpoint_1) {
     .main {
       @include span-columns(12 omega, 12);
-      .panel-2col {
-        .inside {
-          margin: 0;
-        }
-        .panel-col-first {
-          @include span-columns(8, 12);
-        }
-        .panel-col-last {
-          @include span-columns(4 omega, 12);
-        }
-      }
-      .panel-3col-33-stacked {
-        .inside {
-          margin: 0;
-        }
-        .center-wrapper {
-          @include cf;
-          .panel-panel {
-            @include span-columns(4, 12);
-          }
-          .panel-col-last {
-            @include omega;
-          }
-        }
-      }
-      .panel-3col-stacked {
-        .inside {
-          margin: 0;
-        }
-        .center-wrapper {
-          @include cf;
-          .panel-panel {
-            @include span-columns(6, 12);
-          }
-          .panel-col-first,
-          .panel-col-last {
-            @include span-columns(3, 12);
-          }
-          .panel-col-last {
-            @include omega;
-          }
-        }
-      }
     }
   }
 }
