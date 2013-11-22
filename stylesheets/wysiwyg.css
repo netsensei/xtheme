@@ -378,31 +378,14 @@ table {
  * Collect all of your extendable classes, ids and silent extendables.
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/base\/_extendables\.scss}line{font-family:\0000318}}
-.clearfix, header, footer, .main {
+.clearfix {
   zoom: 1;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/base\/_mixins\.scss}line{font-family:\00003154}}
-.clearfix:after, header:after, footer:after, .main:after {
+.clearfix:after {
   content: "";
   display: table;
   clear: both;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/base\/_extendables\.scss}line{font-family:\0000392}}
-.primary_navigation ul.menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/base\/_extendables\.scss}line{font-family:\00003100}}
-.primary_navigation ul.menu {
-  font-size: 0;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/base\/_extendables\.scss}line{font-family:\00003103}}
-.primary_navigation ul.menu li {
-  display: inline-block;
-  font-size: 16px;
 }
 
 /**
@@ -470,114 +453,6 @@ h6 {
   font-size: 12px;
 }
 
-/* ---------- Import design ---------- */
-/*
- * Design
- * 
- * Include all your design elements in this file.
- */
-/**
- * Layout
- *
- * All layout theming should go in this file
- */
-/* Layout */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000310}}
-.container {
-  max-width: 58.75em;
-  padding-left: 0.625em;
-  padding-right: 0.625em;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/\.rvm\/gems\/ruby-1\.9\.3-p385\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/utilities\/general\/_clearfix\.scss}line{font-family:\0000338}}
-.container:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-@media (min-width: 35em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000321}}
-  .one-sidebar.sidebar-first .main {
-    width: 74.46809%;
-    float: right;
-    margin-right: 0;
-  }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000326}}
-  .one-sidebar.sidebar-second .main {
-    width: 74.46809%;
-    float: left;
-    margin-right: 2.12766%;
-  }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000331}}
-  .one-sidebar aside.sidebar_first {
-    width: 23.40426%;
-    float: left;
-    margin-right: 2.12766%;
-  }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000334}}
-  .one-sidebar aside.sidebar_second {
-    width: 23.40426%;
-    float: right;
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 35em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000343}}
-  .two-sidebars .main {
-    width: 48.93617%;
-    float: left;
-    margin-right: 2.12766%;
-  }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000346}}
-  .two-sidebars .sidebar_first {
-    width: 23.40426%;
-    float: left;
-    margin-right: 2.12766%;
-  }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000349}}
-  .two-sidebars .sidebar_second {
-    width: 23.40426%;
-    float: right;
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 35em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000357}}
-  .no-sidebars .main {
-    width: 100%;
-    float: right;
-    margin-right: 0;
-  }
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_navigation\.scss}line{font-family:\000032}}
-.primary_navigation h2 {
-  display: none;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_navigation\.scss}line{font-family:\000035}}
-.primary_navigation ul.menu {
-  text-align: center;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_navigation\.scss}line{font-family:\000038}}
-.primary_navigation ul.menu li {
-  margin: 0;
-  padding: 0;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_navigation\.scss}line{font-family:\0000312}}
-.primary_navigation ul.menu a {
-  text-decoration: none;
-  display: inline-block;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_navigation\.scss}line{font-family:\0000317}}
-.primary_navigation ul.menu a:hover, .primary_navigation ul.menu a:focus, .primary_navigation ul.menu a:active {
-  text-decoration: underline;
-}
-
-/* ---------- Import styles ---------- */
 /* Base link settings */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/styles\/_styles\.scss}line{font-family:\000033}}
 a {

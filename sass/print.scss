@@ -12,3 +12,11 @@
 @import 'respond-to';
 @import 'compass/css3';
 @import 'compass/reset';
+
+@import 'base/typography';
+@import 'design/layout';
+
+
+.sidebar{
+  display: none;
+}

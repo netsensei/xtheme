@@ -15,6 +15,7 @@ header, footer, .main {
   @extend .clearfix;
 }
 .one-sidebar {
+
   @include at-breakpoint($breakpoint_1) {
     &.sidebar-first {
       .main {
