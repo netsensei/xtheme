@@ -21,7 +21,8 @@ module.exports = function (grunt) {
         livereload: true,
       },
       scripts: {
-        files: ['./js/**/*.js']
+        files: ['./js/**/*.js'],
+        tasks: ['jshint']
       },
       html:{
         files: ['./index.html']
@@ -53,8 +54,8 @@ module.exports = function (grunt) {
         jshintrc: '.jshintrc'
       },
       all: [
-        'js/src/*.js',
-        '!js/src/*.min.js'
+        'js/**/*.js',
+        '!js/**/*.min.js'
       ]
     }
   });
