@@ -13,9 +13,12 @@
 @import 'compass/css3';
 @import 'compass/reset';
 
+/* ---------- Import base ---------- */
+@import 'base/functions';
+@import 'base/mixins';
+@import 'base/extendables';
 @import 'base/typography';
 @import 'design/layout';
-
 
 .sidebar{
   display: none;

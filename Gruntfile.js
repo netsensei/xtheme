@@ -31,7 +31,7 @@ module.exports = function (grunt) {
       },
       css:{
         files: ['./sass/**/*.scss'],
-        tasks: ['compass']
+        tasks: ['compass:dev']
       }
     },
     compass: {
@@ -40,22 +40,32 @@ module.exports = function (grunt) {
           sassDir: './sass',
           cssDir: './css'
         }
+      },
+      prod: {
+        options: {
+          sassDir: './sass',
+          cssDir: './css'
+        }
       }
-    },
+    }
   });
 
 
   // Load tasks...
   grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-open');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Task aliases and tasks
   grunt.registerTask('serve', [
     'connect',
     'watch'
+  ]);
+  grunt.registerTask('dev', [
+    'watch'
+  ]);
+  grunt.registerTask('prod', [
+    'compass:prod'
   ]);
 };

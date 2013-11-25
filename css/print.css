@@ -110,6 +110,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+/* ---------- Import base ---------- */
+/**
+ * Functions
+ *
+ */
+/**
+ * Mixins
+ *
+ * Snippets of reusable CSS to develop faster and keep code readable
+ */
+/**
+ * Extendables
+ *
+ * Collect all of your extendable classes, ids and silent extendables.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/base\/_extendables\.scss}line{font-family:\0000318}}
+.clearfix {
+  zoom: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/base\/_mixins\.scss}line{font-family:\00003154}}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /**
  * Typography
  */
@@ -196,51 +222,62 @@ h6 {
   clear: both;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000314}}
+header, footer, .main {
+  zoom: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/base\/_mixins\.scss}line{font-family:\00003154}}
+header:after, footer:after, .main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 @media (min-width: 35em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000322}}
   .one-sidebar.sidebar-first .main {
     width: 74.46809%;
     float: right;
     margin-right: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000327}}
   .one-sidebar.sidebar-second .main {
     width: 74.46809%;
     float: left;
     margin-right: 2.12766%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000332}}
   .one-sidebar aside.sidebar_first {
     width: 23.40426%;
     float: left;
     margin-right: 2.12766%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000335}}
   .one-sidebar aside.sidebar_second {
     width: 23.40426%;
     float: right;
     margin-right: 0;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000322}}
 .lt-ie9 .one-sidebar.sidebar-first .main {
   width: 74.46809%;
   float: right;
   margin-right: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000327}}
 .lt-ie9 .one-sidebar.sidebar-second .main {
   width: 74.46809%;
   float: left;
   margin-right: 2.12766%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000332}}
 .lt-ie9 .one-sidebar aside.sidebar_first {
   width: 23.40426%;
   float: left;
   margin-right: 2.12766%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000335}}
 .lt-ie9 .one-sidebar aside.sidebar_second {
   width: 23.40426%;
   float: right;
@@ -248,38 +285,38 @@ h6 {
 }
 
 @media (min-width: 35em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000344}}
   .two-sidebars .main {
     width: 48.93617%;
     float: left;
     margin-right: 2.12766%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000347}}
   .two-sidebars .sidebar_first {
     width: 23.40426%;
     float: left;
     margin-right: 2.12766%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000350}}
   .two-sidebars .sidebar_second {
     width: 23.40426%;
     float: right;
     margin-right: 0;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000344}}
 .lt-ie9 .two-sidebars .main {
   width: 48.93617%;
   float: left;
   margin-right: 2.12766%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000347}}
 .lt-ie9 .two-sidebars .sidebar_first {
   width: 23.40426%;
   float: left;
   margin-right: 2.12766%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000350}}
 .lt-ie9 .two-sidebars .sidebar_second {
   width: 23.40426%;
   float: right;
@@ -287,21 +324,21 @@ h6 {
 }
 
 @media (min-width: 35em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000358}}
   .no-sidebars .main {
     width: 100%;
     float: right;
     margin-right: 0;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/design\/_layout\.scss}line{font-family:\0000358}}
 .lt-ie9 .no-sidebars .main {
   width: 100%;
   float: right;
   margin-right: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/print\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/frankbaele\/workspace\/projects\/xtheme\/sass\/print\.scss}line{font-family:\0000323}}
 .sidebar {
   display: none;
 }
