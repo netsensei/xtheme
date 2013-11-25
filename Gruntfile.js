@@ -47,6 +47,15 @@ module.exports = function (grunt) {
           cssDir: './css'
         }
       }
+    },
+    jshint: {
+      options: {
+        jshintrc: '.jshintrc'
+      },
+      all: [
+        'js/src/*.js',
+        '!js/src/*.min.js'
+      ]
     }
   });
 
