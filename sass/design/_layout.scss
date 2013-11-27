@@ -16,7 +16,6 @@ header, footer, .main {
 }
 
 .one-sidebar {
-
   @include at-breakpoint($breakpoint_1) {
     &.sidebar-first {
       .main {

@@ -1,36 +1,24 @@
-
 module.exports = function (grunt) {
   "use strict";
 
   // Config...
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    connect: {
-      server: {
-        options: {
-          port: 9001,
-          // Prevents Grunt to close just after the task (starting the server) completes
-          // This will be removed later as `watch` will take care of that
-          keepalive: false,
-          hostname: ''
-        }
-      }
-    },
     watch: {
       options: {
         livereload: true,
       },
       scripts: {
-        files: ['./js/**/*.js'],
-        tasks: ['jshint']
+        files: ['./js/src/**/*.js'],
+        tasks: ['jshint','concat']
       },
-      html:{
+      html: {
         files: ['./index.html']
       },
-      pictures:{
+      pictures: {
         files: ['./img/**/*']
       },
-      css:{
+      css: {
         files: ['./sass/**/*.scss'],
         tasks: ['compass:dev']
       }
@@ -39,13 +27,15 @@ module.exports = function (grunt) {
       dev: {
         options: {
           sassDir: './sass',
-          cssDir: './css'
+          cssDir: './css',
+          environment: 'development'
         }
       },
       prod: {
         options: {
           sassDir: './sass',
-          cssDir: './css'
+          cssDir: './css',
+          environment: 'production'
         }
       }
     },
@@ -54,28 +44,41 @@ module.exports = function (grunt) {
         jshintrc: '.jshintrc'
       },
       all: [
-        'js/**/*.js',
-        '!js/**/*.min.js'
+        'js/src/**/*.js',
+        '!js/scripts.js'
       ]
+    },
+    uglify: {
+      prod: {
+        options: {
+          mangle: true,
+          compress: true
+        },
+        files: {
+          'js/scripts.js': ['js/scripts.js']
+        }
+      }
+    },
+    concat: {
+      dist: {
+        src: ['js/src/**/*.js'],
+        dest: 'js/scripts.js'
+      }
     }
   });
 
 
   // Load tasks...
-  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-favicons');
   // Task aliases and tasks
-  grunt.registerTask('serve', [
-    'connect',
-    'watch'
-  ]);
-  grunt.registerTask('dev', [
-    'watch'
-  ]);
-  grunt.registerTask('prod', [
-    'compass:prod'
+  grunt.registerTask('build', [
+    'compass:prod',
+    'concat',
+    'uglify:prod'
   ]);
 };
