@@ -64,6 +64,22 @@ module.exports = function (grunt) {
         src: ['js/src/**/*.js'],
         dest: 'js/scripts.js'
       }
+    },
+    favicons: {
+      options: {
+        trueColor: true,
+        precomposed: true,
+        appleTouchBackgroundColor: "#e2b2c2",
+        coast: true,
+        windowsTile: true,
+        tileBlackWhite: false,
+        tileColor: "auto",
+        HTMLPrefix: "/img/icons/"
+      },
+      icons: {
+        src: 'logo.png',
+        dest: 'img/icons'
+      }
     }
   });
 
@@ -76,7 +92,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-favicons');
   // Task aliases and tasks
-  grunt.registerTask('build', [
+  grunt.registerTask('prod', [
     'compass:prod',
     'concat',
     'uglify:prod'
