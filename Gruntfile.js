@@ -35,7 +35,8 @@ module.exports = function (grunt) {
         options: {
           sassDir: './sass',
           cssDir: './css',
-          environment: 'production'
+          environment: 'production',
+          force: true
         }
       }
     },
@@ -45,7 +46,7 @@ module.exports = function (grunt) {
       },
       all: [
         'js/src/**/*.js',
-        '!js/scripts.js'
+        '!js/scripts.gen.js'
       ]
     },
     uglify: {
@@ -55,30 +56,37 @@ module.exports = function (grunt) {
           compress: true
         },
         files: {
-          'js/scripts.js': ['js/scripts.js']
+          'js/scripts.gen.js': ['js/scripts.gen.js']
         }
       }
     },
     concat: {
       dist: {
         src: ['js/src/**/*.js'],
-        dest: 'js/scripts.js'
+        dest: 'js/scripts.gen.js'
       }
     },
     favicons: {
       options: {
         trueColor: true,
-        precomposed: true,
-        appleTouchBackgroundColor: "#e2b2c2",
+        precomposed: false,
+        appleTouchBackgroundColor: "#f5f5dc",
         coast: true,
         windowsTile: true,
         tileBlackWhite: false,
         tileColor: "auto",
-        HTMLPrefix: "/img/icons/"
+        html: 'index.html',
+        HTMLPrefix: "/sites/all/themes/xtheme/img/icons/"
       },
       icons: {
-        src: 'logo.png',
+        src: 'icon.png',
         dest: 'img/icons'
+      }
+    },
+    copy:{
+      favicon: {
+        src: 'img/icons/favicon.ico',
+        dest: 'favicon.ico'
       }
     }
   });
@@ -91,10 +99,15 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-favicons');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   // Task aliases and tasks
   grunt.registerTask('prod', [
     'compass:prod',
     'concat',
     'uglify:prod'
+  ]);
+  grunt.registerTask('icons', [
+    'favicons',
+    'copy:favicon'
   ]);
 };

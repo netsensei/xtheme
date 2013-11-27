@@ -3,6 +3,6 @@ function test(){
 }
 
 
-function test3(){
+function test2(){
   window.alert('test');
 }

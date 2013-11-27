@@ -17,7 +17,7 @@ regions[content] = Content
 regions[footer] = Footer
 
 ;-------------- js -------------
-scripts[] = js/scripts.js
+scripts[] = js/scripts.gen.js
 
 breakpoints[all] = (min-width: 0em)
 breakpoints[small] = (min-width: 35em)
