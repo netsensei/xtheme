@@ -77,10 +77,10 @@ $theme_path = drupal_get_path('theme', 'xtheme');
     <?php print $styles; ?>
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-      <link rel="stylesheet" media="screen, projection" href="<?php print $theme_path ?>/css/ie.css">
+      <link rel="stylesheet" media="screen, projection" href="/<?php print $theme_path ?>/css/ie.css">
     <![endif]-->
-    <link rel="stylesheet" media="screen, projection" href="<?php print $theme_path ?>/css/style.css">
-    <link rel="stylesheet" media="print" href="<?php print $theme_path ?>/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="/<?php print $theme_path ?>/css/style.css">
+    <link rel="stylesheet" media="print" href="/<?php print $theme_path ?>/css/print.css">
     <?php print $scripts; ?>
   </head>
   <body class="<?php print $classes; ?>" <?php print $attributes;?>>
