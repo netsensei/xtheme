@@ -10,7 +10,7 @@ sass_options = {:debug_info => true, :quiet => false}
 
 # Set this to the root of your project when deployed:
 http_path = "/sites/all/themes/xtheme/"
-css_dir = "stylesheets"
+css_dir = "css"
 sass_dir = "sass"
 images_dir = "images"
 javascripts_dir = "js"
