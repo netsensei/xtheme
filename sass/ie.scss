@@ -5,22 +5,9 @@
  *
  * This file is compiled into style.css
  */
+@import "bourbon";
+@import "neat";
 @import 'base/variables';
-/* ---------- Compass Extensions ---------- */
-@import 'toolkit';
-@import 'susy';
-@import 'respond-to';
-@import 'compass/css3';
-@import 'compass/reset';
-@import "normalize";
-
-// Turn off media-query output for IE-only stylesheets.
-// $breakpoint-media-output: <boolean>;
-$breakpoint-media-output: false;
-
-//Turn off media-query fallback output for non-IE stylesheets.
-// $breakpoint-ie-output: <boolean>;
-$breakpoint-ie-output: true;
 
 /* ---------- Import base ---------- */
 @import 'base/functions';

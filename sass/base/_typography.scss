@@ -25,7 +25,7 @@ textarea {
 
 /* Line-heights */
 body{
-  @include adjust-font-size-to($base-font-size);
+  font-size: $base-font-size;
 }
 
 h1 {

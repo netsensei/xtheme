@@ -8,54 +8,58 @@
 /* Layout */
 
 .container {
-  @include container;
+  @include outer-container;
 }
 
 header, footer, .main {
   @include cf;
 }
-
+.column{
+  @include media($breakpoint_1) {
+    @include span-columns(4  of 12);
+  }
+}
 .one-sidebar {
-  @include at-breakpoint($breakpoint_1) {
+  @include media($breakpoint_1) {
     &.sidebar-first {
       .main {
-        @include span-columns(9 omega, 12);
+        @include span-columns(9 omega of 12);
       }
     }
     &.sidebar-second {
       .main {
-        @include span-columns(9, 12);
+        @include span-columns(9 of 12);
       }
     }
     aside {
       &.sidebar_first {
-        @include span-columns(3, 12);
+        @include span-columns(3 of 12);
       }
       &.sidebar_second {
-        @include span-columns(3 omega, 12);
+        @include span-columns(3 omega of 12);
       }
     }
   }
 }
 
 .two-sidebars {
-  @include at-breakpoint($breakpoint_1) {
+  @include media($breakpoint_1) {
     .main {
-      @include span-columns(6, 12);
+      @include span-columns(6 of 12);
     }
     .sidebar_first {
-      @include span-columns(3, 12);
+      @include span-columns(3 of 12);
     }
     .sidebar_second {
-      @include span-columns(3 omega, 12);
+      @include span-columns(3 omega of 12);
     }
   }
 }
 
 .no-sidebars {
-  @include at-breakpoint($breakpoint_1) {
+  @include media($breakpoint_1) {
     .main {
-      @include span-columns(12 omega, 12);
+      @include span-columns(12 omega of 12);
     }
   }
 }

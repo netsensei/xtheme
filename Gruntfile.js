@@ -1,9 +1,21 @@
 module.exports = function (grunt) {
   "use strict";
-
+  var neat = require('node-neat').includePaths;
+  var bourbon = require('node-bourbon').includePaths;
   // Config...
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    connect: {
+      server: {
+        options: {
+          port: 9001,
+          // Prevents Grunt to close just after the task (starting the server) completes
+          // This will be removed later as `watch` will take care of that
+          keepalive: false,
+          hostname: '',
+        }
+      }
+    },
     watch: {
       options: {
         livereload: true,
@@ -20,24 +32,7 @@ module.exports = function (grunt) {
       },
       css: {
         files: ['./sass/**/*.scss'],
-        tasks: ['compass:dev']
-      }
-    },
-    compass: {
-      dev: {
-        options: {
-          sassDir: './sass',
-          cssDir: './css',
-          environment: 'development'
-        }
-      },
-      prod: {
-        options: {
-          sassDir: './sass',
-          cssDir: './css',
-          environment: 'production',
-          force: true
-        }
+        tasks: ['sass']
       }
     },
     jshint: {
@@ -88,21 +83,39 @@ module.exports = function (grunt) {
         src: 'img/icons/favicon.ico',
         dest: 'favicon.ico'
       }
+    },
+    sass: {
+      options: {
+        includePaths: neat,
+        outputStyle: 'compressed'
+      },
+      dist: {
+        files: {
+          './css/style.css': './sass/style.scss',
+          './css/ie.css': './sass/ie.scss',
+          './css/print.css': './sass/print.scss',
+          './css/wysiwyg.css': './sass/wysiwyg.scss'
+        }
+      }
     }
   });
 
 
   // Load tasks...
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-favicons');
+  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-sass');
   // Task aliases and tasks
+  grunt.registerTask('serve', [
+    'connect',
+    'watch'
+  ]);
   grunt.registerTask('prod', [
-    'compass:prod',
     'concat',
     'uglify:prod'
   ]);

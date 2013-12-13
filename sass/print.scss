@@ -5,13 +5,9 @@
  *
  * This file is compiled into style.css
  */
+@import "bourbon";
+@import "neat";
 @import 'base/variables';
-/* ---------- Compass Extensions ---------- */
-@import 'toolkit';
-@import 'susy';
-@import 'respond-to';
-@import 'compass/css3';
-@import 'compass/reset';
 
 /* ---------- Import base ---------- */
 @import 'base/functions';
