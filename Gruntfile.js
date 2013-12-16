@@ -111,7 +111,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-sass');
   // Task aliases and tasks
-  grunt.registerTask('serve', [
+  grunt.registerTask('server', [
     'connect',
     'watch'
   ]);
@@ -123,4 +123,7 @@ module.exports = function (grunt) {
     'favicons',
     'copy:favicon'
   ]);
+
+  // Default task.
+  grunt.registerTask('default', 'server');
 };
