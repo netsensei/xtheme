@@ -22,7 +22,7 @@ module.exports = function (grunt) {
       },
       scripts: {
         files: ['./js/src/**/*.js'],
-        tasks: ['jshint','concat']
+        tasks: ['jshint']
       },
       html: {
         files: ['./index.html']
@@ -51,14 +51,8 @@ module.exports = function (grunt) {
           compress: true
         },
         files: {
-          'js/scripts.gen.js': ['js/scripts.gen.js']
+          'js/scripts.gen.js': ['js/scripts.js']
         }
-      }
-    },
-    concat: {
-      dist: {
-        src: ['js/src/**/*.js'],
-        dest: 'js/scripts.gen.js'
       }
     },
     favicons: {
@@ -116,7 +110,6 @@ module.exports = function (grunt) {
     'watch'
   ]);
   grunt.registerTask('prod', [
-    'concat',
     'uglify:prod'
   ]);
   grunt.registerTask('icons', [

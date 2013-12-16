@@ -21,10 +21,13 @@ npm install (in the root of the xtheme)
 
 Grunt tasks
 ===========
+- grunt sass
+
+compile the sass files
 
 - grunt watch
 
-start a wacth and livereload session for the xtheme
+start a watch and livereload session for the xtheme
 
 - grunt icons
 
@@ -33,3 +36,7 @@ generate icons and favicon based on the icon.png in the root of the project
 - grunt prod
 
 compile the theme for production
+
+Grunt interesting reads
+===========
+
