@@ -158,3 +158,12 @@
   }
 }
 
+@mixin outer-container{
+  @include clearfix;
+  max-width: $max-width;
+  padding: 0 $gutter/2;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
