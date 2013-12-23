@@ -167,3 +167,62 @@
     right: auto;
   }
 }
+/* Overwrite the default media mixin for ie9 fallback */
+@mixin media($query:$feature $value $columns, $ie: false, $total-columns: $grid-columns) {
+  @if $ie{
+    .lt-ie9 &{
+      $default-grid-columns: $grid-columns;
+      $grid-columns: $total-columns;
+      @content;
+      $grid-columns: $default-grid-columns;
+    }
+  }
+  @if length($query) == 1 {
+    @media screen and ($default-feature: nth($query, 1)) {
+      $default-grid-columns: $grid-columns;
+      $grid-columns: $total-columns;
+      @content;
+      $grid-columns: $default-grid-columns;
+    }
+  }
+
+  @else if length($query) == 2 {
+    @media screen and (nth($query, 1): nth($query, 2)) {
+  $default-grid-columns: $grid-columns;
+    $grid-columns: $total-columns;
+    @content;
+    $grid-columns: $default-grid-columns;
+  }
+  }
+
+  @else if length($query) == 3 {
+    @media screen and (nth($query, 1): nth($query, 2)) {
+  $default-grid-columns: $grid-columns;
+    $grid-columns: nth($query, 3);
+    @content;
+    $grid-columns: $default-grid-columns;
+  }
+  }
+
+  @else if length($query) == 4 {
+    @media screen and (nth($query, 1): nth($query, 2)) and (nth($query, 3): nth($query, 4)) {
+  $default-grid-columns: $grid-columns;
+    $grid-columns: $total-columns;
+    @content;
+    $grid-columns: $default-grid-columns;
+  }
+  }
+
+  @else if length($query) == 5 {
+    @media screen and (nth($query, 1): nth($query, 2)) and (nth($query, 3): nth($query, 4)) {
+  $default-grid-columns: $grid-columns;
+    $grid-columns: nth($query, 5);
+    @content;
+    $grid-columns: $default-grid-columns;
+  }
+  }
+
+  @else {
+    @warn "Wrong number of arguments for breakpoint(). Read the documentation for more details.";
+  }
+}

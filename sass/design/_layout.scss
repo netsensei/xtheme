@@ -15,15 +15,16 @@ header, footer, .main {
   @include cf;
 }
 .column{
-  @include media($breakpoint_1) {
+  @include media($breakpoint_1, true) {
     @include span-columns(4  of 12);
   }
 }
 .one-sidebar {
-  @include media($breakpoint_1) {
+  @include media($breakpoint_1, true) {
     &.sidebar-first {
       .main {
-        @include span-columns(9 omega of 12);
+        @include span-columns(9 of 12);
+        @include omega;
       }
     }
     &.sidebar-second {
@@ -36,14 +37,15 @@ header, footer, .main {
         @include span-columns(3 of 12);
       }
       &.sidebar_second {
-        @include span-columns(3 omega of 12);
+        @include span-columns(3 of 12);
+        @include omega;
       }
     }
   }
 }
 
 .two-sidebars {
-  @include media($breakpoint_1) {
+  @include media($breakpoint_1, true) {
     .main {
       @include span-columns(6 of 12);
     }
@@ -51,15 +53,17 @@ header, footer, .main {
       @include span-columns(3 of 12);
     }
     .sidebar_second {
-      @include span-columns(3 omega of 12);
+      @include span-columns(3 of 12);
+      @include omega;
     }
   }
 }
 
 .no-sidebars {
-  @include media($breakpoint_1) {
+  @include media($breakpoint_1, true) {
     .main {
-      @include span-columns(12 omega of 12);
+      @include span-columns(12 of 12);
+      @include omega;
     }
   }
 }
