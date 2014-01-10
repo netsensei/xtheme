@@ -15,7 +15,9 @@ regions[sidebar_second] = Sidebar second
 regions[highlighted] = Highlighted
 regions[content] = Content
 regions[footer] = Footer
-
+;-------------- css ------------
+stylesheets[all][] = css/style.css
+stylesheets[print][] = css/print.css
 ;-------------- js -------------
 scripts[] = js/scripts.gen.js
 
