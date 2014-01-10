@@ -1,27 +1,15 @@
 module.exports = function (grunt) {
   "use strict";
   var neat = require('node-neat').includePaths;
-  var bourbon = require('node-bourbon').includePaths;
   // Config...
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    connect: {
-      server: {
-        options: {
-          port: 9001,
-          // Prevents Grunt to close just after the task (starting the server) completes
-          // This will be removed later as `watch` will take care of that
-          keepalive: false,
-          hostname: '',
-        }
-      }
-    },
     watch: {
       options: {
         livereload: true,
       },
       scripts: {
-        files: ['./js/src/**/*.js'],
+        files: ['./js/**/*.js'],
         tasks: ['jshint']
       },
       html: {
@@ -98,16 +86,10 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-favicons');
-  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-sass');
   // Task aliases and tasks
-  grunt.registerTask('server', [
-    'connect',
-    'watch'
-  ]);
   grunt.registerTask('prod', [
     'uglify:prod'
   ]);
@@ -115,7 +97,6 @@ module.exports = function (grunt) {
     'favicons',
     'copy:favicon'
   ]);
-
   // Default task.
-  grunt.registerTask('default', 'server');
+  grunt.registerTask('default', 'watch');
 };
