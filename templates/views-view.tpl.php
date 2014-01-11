@@ -25,7 +25,6 @@
  * - $more: A link to view more, if any
  *
  * @ingroup views_templates
- *
  */
 ?>
 <div class="<?php print $classes; ?>">
