@@ -20,7 +20,7 @@ module.exports = function (grunt) {
       },
       css: {
         files: ['./sass/**/*.scss'],
-        tasks: ['sass']
+        tasks: ['sass:dev']
       }
     },
     jshint: {
@@ -60,7 +60,7 @@ module.exports = function (grunt) {
         dest: 'img/icons'
       }
     },
-    copy:{
+    copy: {
       favicon: {
         src: 'img/icons/favicon.ico',
         dest: 'favicon.ico'
@@ -68,10 +68,22 @@ module.exports = function (grunt) {
     },
     sass: {
       options: {
-        includePaths: neat,
-        outputStyle: 'compressed'
+        includePaths: neat
       },
-      dist: {
+      prod: {
+        options: {
+          outputStyle: 'compressed'
+        },
+        files: {
+          './css/style.css': './sass/style.scss',
+          './css/print.css': './sass/print.scss',
+          './css/wysiwyg.css': './sass/wysiwyg.scss'
+        }
+      },
+      dev: {
+        options: {
+          outputStyle: 'nested'
+        },
         files: {
           './css/style.css': './sass/style.scss',
           './css/print.css': './sass/print.scss',
@@ -91,7 +103,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-sass');
   // Task aliases and tasks
   grunt.registerTask('prod', [
-    'uglify:prod'
+    'uglify:prod',
+    'sass:prod'
   ]);
   grunt.registerTask('icons', [
     'favicons',
