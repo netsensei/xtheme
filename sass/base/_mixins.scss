@@ -17,19 +17,6 @@
   @include size($size, $size);
 }
 
-// Placeholder text
-// -------------------------
-@mixin placeholder($color: $placeholderText) {
-  &:-moz-placeholder {
-    color: $color;
-  }
-  &:-ms-input-placeholder {
-    color: $color;
-  }
-  &::-webkit-input-placeholder {
-    color: $color;
-  }
-}
 // Reset filters for IE
 @mixin gradient-reset-filter() {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
@@ -188,38 +175,38 @@
 
   @else if length($query) == 2 {
     @media screen and (nth($query, 1): nth($query, 2)) {
-  $default-grid-columns: $grid-columns;
-    $grid-columns: $total-columns;
-    @content;
-    $grid-columns: $default-grid-columns;
-  }
+      $default-grid-columns: $grid-columns;
+      $grid-columns: $total-columns;
+      @content;
+      $grid-columns: $default-grid-columns;
+    }
   }
 
   @else if length($query) == 3 {
     @media screen and (nth($query, 1): nth($query, 2)) {
-  $default-grid-columns: $grid-columns;
-    $grid-columns: nth($query, 3);
-    @content;
-    $grid-columns: $default-grid-columns;
-  }
+      $default-grid-columns: $grid-columns;
+      $grid-columns: nth($query, 3);
+      @content;
+      $grid-columns: $default-grid-columns;
+    }
   }
 
   @else if length($query) == 4 {
     @media screen and (nth($query, 1): nth($query, 2)) and (nth($query, 3): nth($query, 4)) {
-  $default-grid-columns: $grid-columns;
-    $grid-columns: $total-columns;
-    @content;
-    $grid-columns: $default-grid-columns;
-  }
+      $default-grid-columns: $grid-columns;
+      $grid-columns: $total-columns;
+      @content;
+      $grid-columns: $default-grid-columns;
+    }
   }
 
   @else if length($query) == 5 {
     @media screen and (nth($query, 1): nth($query, 2)) and (nth($query, 3): nth($query, 4)) {
-  $default-grid-columns: $grid-columns;
-    $grid-columns: nth($query, 5);
-    @content;
-    $grid-columns: $default-grid-columns;
-  }
+      $default-grid-columns: $grid-columns;
+      $grid-columns: nth($query, 5);
+      @content;
+      $grid-columns: $default-grid-columns;
+    }
   }
 
   @else {

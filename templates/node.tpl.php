@@ -83,6 +83,8 @@
  *
  *
  */
+?>
+<?php
 if ($classes) {
   $classes = ' class="'. $classes . ' "';
 }

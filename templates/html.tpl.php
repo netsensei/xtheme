@@ -45,6 +45,8 @@
  * @link http://api.drupal.org/api/drupal/modules--system--html.tpl.php/7
  *
  */
+?>
+<?php
 $theme_path = drupal_get_path('theme', 'xtheme');
 ?>
 <!doctype html>
