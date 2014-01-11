@@ -26,9 +26,6 @@
  *
  * @ingroup views_templates
  *
- * Wunderkraut changes
- * --------------------------------------------------------------------
- * - Remove view-content wrapper
  */
 ?>
 <div class="<?php print $classes; ?>">

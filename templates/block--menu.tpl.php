@@ -46,16 +46,8 @@
  * @link http://api.drupal.org/api/drupal/modules--block--block.tpl.php/7
  *
  *
- * Wunderkraut changes
- * --------------------------------------------------------------------
- * - Add HTML5 asesomenesssss
- * - Remove id's
- * - Remove content wrapper div
- * -
  */
-?>
 
-<?php
 if ($classes) {
   $classes = ' class="'. $classes . ' "';
 }

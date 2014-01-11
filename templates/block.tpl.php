@@ -45,15 +45,7 @@
  *
  * @link http://api.drupal.org/api/drupal/modules--block--block.tpl.php/7
  *
- *
- * Wunderkraut changes
- * --------------------------------------------------------------------
- * - Remove id's
- * - Add aria role search for search block
  */
-?>
-
-<?php
 
 if ($classes) {
   $classes = ' class="'. $classes . '"';

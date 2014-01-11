@@ -82,16 +82,7 @@
  * @link http://api.drupal.org/api/drupal/modules--node--node.tpl.php/7
  *
  *
- * Wunderkraut changes
- * --------------------------------------------------------------------
- * - Add HTML5 asesomenesssss
- * - Remove id's
- * - Remove user picture
- * - Remove comments, submitted, links
  */
-?>
-
-<?php
 if ($classes) {
   $classes = ' class="'. $classes . ' "';
 }

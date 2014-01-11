@@ -72,12 +72,6 @@
  *
  * @link http://api.drupal.org/api/drupal/modules--system--page.tpl.php/7
  *
- * Wunderkraut changes
- * --------------------------------------------------------------------
- * - Add HTML5 asesomenesssss
- * - Alter regions
- * - Remove id's
- * -
  */
 ?>
 <div class="page">

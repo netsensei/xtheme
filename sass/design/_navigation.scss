@@ -3,7 +3,6 @@
     display: none;
   }
   ul.menu {
-    @extend %horizontal-menu;
     text-align: center;
     li {
       margin: 0;

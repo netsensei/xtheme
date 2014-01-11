@@ -27,11 +27,6 @@
  * @see template_preprocess_entity()
  * @see template_process()
  *
- * Wunderkraut changes
- * --------------------------------------------------------------------
- * - Remove clearfix
- * - Remove content wrapper 
- * -
  */
 ?>
 <div class="<?php print $classes; ?> "<?php print $attributes; ?>>

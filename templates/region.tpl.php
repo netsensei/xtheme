@@ -30,10 +30,6 @@
  * @link http://api.drupal.org/api/drupal/modules--system--region.tpl.php/7
  *
  *
- * Wunderkraut changes
- * --------------------------------------------------------------------
- * - Remove check for existing content
- * - 
  */
 ?>
 

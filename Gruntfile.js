@@ -82,7 +82,7 @@ module.exports = function (grunt) {
       },
       dev: {
         options: {
-          outputStyle: 'nested'
+          outputStyle: 'expanded'
         },
         files: {
           './css/style.css': './sass/style.scss',
