@@ -71,7 +71,6 @@
  * @ingroup themeable
  *
  * @link http://api.drupal.org/api/drupal/modules--system--page.tpl.php/7
- *
  */
 ?>
 <div class="page">
@@ -86,7 +85,7 @@
         </figure>
       <?php endif; ?>
 
-      <?php if($site_name OR $site_slogan ): ?>
+      <?php if($site_name OR $site_slogan): ?>
         <div class="site-name-slogan">
           <?php if($site_name): ?>
             <?php if($is_front): ?>
@@ -127,15 +126,15 @@
 
     <div role="main" class="main">
 
-      <?php if($page['highlighted']){ ?>
+      <?php if($page['highlighted']): ?>
         <?php print render($page['highlighted']); ?>
-      <?php } ?>
+      <?php endif; ?>
 
-      <?php if($messages){ ?>
+      <?php if($messages):?>
         <div class="drupal-messages">
           <?php print $messages; ?>
         </div>
-      <?php } ?>
+      <?php endif; ?>
 
       <?php if ($title && !$is_front): ?>
         <?php print render($title_prefix); ?>

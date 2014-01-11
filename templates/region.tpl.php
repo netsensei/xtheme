@@ -28,13 +28,11 @@
  * @ingroup themeable
  *
  * @link http://api.drupal.org/api/drupal/modules--system--region.tpl.php/7
- *
- *
  */
 ?>
-
 <div class="<?php print $classes; ?>">
   <?php print $content; ?>
 </div>
+
 
 

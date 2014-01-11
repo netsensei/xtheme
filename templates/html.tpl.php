@@ -43,7 +43,6 @@
  * @ingroup themeable
  *
  * @link http://api.drupal.org/api/drupal/modules--system--html.tpl.php/7
- *
  */
 ?>
 <?php

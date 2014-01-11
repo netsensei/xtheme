@@ -80,12 +80,10 @@
  * @ingroup themeable
  *
  * @link http://api.drupal.org/api/drupal/modules--node--node.tpl.php/7
- *
- *
  */
 ?>
 <?php
-if ($classes) {
+if ( $classes ) {
   $classes = ' class="'. $classes . ' "';
 }
 ?>
@@ -102,10 +100,3 @@ if ($classes) {
     <?php print render($content);?>
   </div>
 </article>
-
-
-
-
-
-
-
