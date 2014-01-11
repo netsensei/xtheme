@@ -92,8 +92,6 @@ module.exports = function (grunt) {
       }
     }
   });
-
-
   // Load tasks...
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
