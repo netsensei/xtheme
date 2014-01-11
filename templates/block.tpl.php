@@ -44,7 +44,6 @@
  * @ingroup themeable
  *
  * @link http://api.drupal.org/api/drupal/modules--block--block.tpl.php/7
- *
  */
 ?>
 <?php
@@ -52,7 +51,7 @@ if ($classes) {
   $classes = ' class="'. $classes . '"';
 }
 // Add a aria role search if this is the search block
-if($block_html_id == "block-search-form"){
+if( $block_html_id == "block-search-form" ){
   $role = ' role="search"';
 } else {
   $role = '';

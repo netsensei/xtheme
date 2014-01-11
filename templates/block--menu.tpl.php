@@ -44,12 +44,10 @@
  * @ingroup themeable
  *
  * @link http://api.drupal.org/api/drupal/modules--block--block.tpl.php/7
- *
- *
  */
 ?>
 <?php
-if ($classes) {
+if ( $classes ) {
   $classes = ' class="'. $classes . ' "';
 }
 ?>
