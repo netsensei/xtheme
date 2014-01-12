@@ -77,7 +77,7 @@
   <header role="banner">
     <div class="container">
 
-      <?php if ($logo): ?>
+      <?php if ($logo) : ?>
         <figure class="logo">
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
           <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
@@ -85,22 +85,22 @@
         </figure>
       <?php endif; ?>
 
-      <?php if($site_name OR $site_slogan): ?>
+      <?php if ($site_name || $site_slogan) : ?>
         <div class="site-name-slogan">
-          <?php if($site_name): ?>
-            <?php if($is_front): ?>
+          <?php if ($site_name) : ?>
+            <?php if ($is_front) : ?>
               <h1 class="site-name"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a></h1>
             <?php else : ?>
               <p class="site-name"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a></p>
             <?php endif; ?>
           <?php endif; ?>
-          <?php if ($site_slogan): ?>
+          <?php if ($site_slogan) : ?>
             <p class="slogan"><?php print $site_slogan; ?></p>
           <?php endif; ?>
         </div>
       <?php endif; ?>
 
-      <?php if ($page['header']): ?>
+      <?php if ($page['header']) : ?>
         <div class="header">
           <?php print render($page['header']); ?>
         </div>
@@ -126,11 +126,11 @@
 
     <div role="main" class="main">
 
-      <?php if($page['highlighted']): ?>
+      <?php if ($page['highlighted']): ?>
         <?php print render($page['highlighted']); ?>
       <?php endif; ?>
 
-      <?php if($messages):?>
+      <?php if ($messages) : ?>
         <div class="drupal-messages">
           <?php print $messages; ?>
         </div>
@@ -144,23 +144,23 @@
 
       <?php print $breadcrumb; ?>
 
-      <?php if ($action_links): ?>
+      <?php if ($action_links) : ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
 
-      <?php if ($tabs['#primary']): ?>
+      <?php if ($tabs['#primary']) : ?>
         <nav class="tabs"><?php print render($tabs); ?></nav>
       <?php endif; ?>
       <?php print render($page['content']); ?>
     </div><!--/main-->
 
-    <?php if ($page['sidebar_second']): ?>
+    <?php if ($page['sidebar_second']) : ?>
     <aside role="complementary" class="sidebar sidebar_second">
       <?php print render($page['sidebar_second']); ?>
     </aside>
     <?php endif; ?>
   </div>
-  <?php if ($page['footer']): ?>
+  <?php if ($page['footer']) : ?>
     <footer role="contentinfo">
       <div class="container">
         <?php print render($page['footer']); ?>

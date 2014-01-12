@@ -47,7 +47,7 @@
  */
 ?>
 <?php
-if ($classes)
+if ($classes) :
   $classes = ' class="' . $classes . '"';
 endif;
 
