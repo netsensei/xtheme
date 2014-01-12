@@ -47,9 +47,9 @@
  */
 ?>
 <?php
-if ( $classes ) {
-  $classes = ' class="'. $classes . ' "';
-}
+if ($classes) :
+  $classes = ' class="' . $classes . ' "';
+endif;
 ?>
 <nav <?php print $classes .  $attributes; ?> role="navigation">
   <?php print render($title_prefix); ?>

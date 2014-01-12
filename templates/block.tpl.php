@@ -47,17 +47,18 @@
  */
 ?>
 <?php
-if ($classes) {
-  $classes = ' class="'. $classes . '"';
-}
-// Add a aria role search if this is the search block
-if( $block_html_id == "block-search-form" ){
+if ($classes)
+  $classes = ' class="' . $classes . '"';
+endif;
+
+// Add a, aria role search if this is the search block.
+if ($block_html_id == "block-search-form") :
   $role = ' role="search"';
-} else {
+else :
   $role = '';
-}
+endif;
 ?>
-<div <?php print $classes .  $attributes . $role; ?>>
+<div <?php print $classes . $attributes . $role; ?>>
     <?php print render($title_prefix); ?>
     <?php if ($block->subject): ?>
       <h2<?php print $title_attributes; ?>><?php print $block->subject ?></h2>

@@ -1,6 +1,6 @@
 <?php
 /**
- * @file views-view-list.tpl.php
+ * @file
  * Default simple view template to display a list of rows.
  *
  * - $title : The title of this group of rows.  May be empty.
@@ -14,7 +14,7 @@
   <?php endif; ?>
   <?php print $list_type_prefix; ?>
     <?php foreach ($rows as $id => $row): ?>
-      <li <?php if( $classes_array[$id] ) {print 'class="' .$classes_array[$id] . '"';} ?>>
+      <li <?php if ($classes_array[$id]) : print 'class="' . $classes_array[$id] . '"'; endif; ?>>
         <?php print $row; ?>
       </li>
     <?php endforeach; ?>
