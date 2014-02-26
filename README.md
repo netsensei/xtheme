@@ -37,6 +37,12 @@ generate icons and favicon based on the icon.png in the root of the project
 
 compile the theme for production
 
-Grunt interesting reads
+Compass compile
 ===========
 
+You can also compile this theme with compass or ruby just install the following gems
+
+gem install sass
+gem install compass
+gem install bourbon
+gem install neat
