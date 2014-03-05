@@ -1,4 +1,11 @@
-/* Basic responsive images */
+/* Border-box on everything */
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+/* Base responsive images */
 img {
   height: auto;
   max-width: 100%;
