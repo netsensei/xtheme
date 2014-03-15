@@ -43,29 +43,6 @@ module.exports = function (grunt) {
         }
       }
     },
-    favicons: {
-      options: {
-        trueColor: true,
-        precomposed: false,
-        appleTouchBackgroundColor: "#f5f5dc",
-        coast: true,
-        windowsTile: true,
-        tileBlackWhite: false,
-        tileColor: "auto",
-        html: 'index.html',
-        HTMLPrefix: "/sites/all/themes/xtheme/img/icons/"
-      },
-      icons: {
-        src: 'icon.png',
-        dest: 'img/icons'
-      }
-    },
-    copy: {
-      favicon: {
-        src: 'img/icons/favicon.ico',
-        dest: 'favicon.ico'
-      }
-    },
     sass: {
       options: {
         includePaths: neat
@@ -96,17 +73,11 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-favicons');
-  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-sass');
   // Task aliases and tasks
   grunt.registerTask('prod', [
     'uglify:prod',
     'sass:prod'
-  ]);
-  grunt.registerTask('icons', [
-    'favicons',
-    'copy:favicon'
   ]);
   // Default task.
   grunt.registerTask('default', 'watch');

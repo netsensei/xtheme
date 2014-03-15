@@ -29,10 +29,6 @@ compile the sass files
 
 start a watch and livereload session for the xtheme
 
-- grunt icons
-
-generate icons and favicon based on the icon.png in the root of the project
-
 - grunt prod
 
 compile the theme for production

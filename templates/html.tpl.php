@@ -57,18 +57,6 @@ $theme_path = drupal_get_path('theme', 'xtheme');
 <!--[if (gte IE 9)|(gt IEMobile 7)]><html class="ie" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>><![endif]-->
 <![if !IE]><html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>><![endif]>
   <head>
-    <link rel="icon" type="image/png" sizes="64x64" href="<?php print $theme_path ?>/img/icons/favicon.png">
-    <link rel="icon" sizes="228x228" href="<?php print $theme_path ?>/img/icons/coast-icon-228x228.png">
-    <link rel="apple-touch-icon" href="<?php print $theme_path ?>/img/icons/apple-touch-icon.png">
-    <link rel="apple-touch-icon-precomposed" href="<?php print $theme_path ?>/img/icons/apple-touch-icon-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php print $theme_path ?>/img/icons/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="<?php print $theme_path ?>/img/icons/apple-touch-icon-76x76-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php print $theme_path ?>/img/icons/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="<?php print $theme_path ?>/img/icons/apple-touch-icon-120x120-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php print $theme_path ?>/img/icons/apple-touch-icon-144x144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php print $theme_path ?>/img/icons/apple-touch-icon-152x152-precomposed.png">
-    <meta name="msapplication-TileImage" content="<?php print $theme_path ?>/img/icons/windows-tile-144x144.png">
-    <meta name="msapplication-TileColor" content="#576A31">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title><?php print $head_title; ?></title>
     <?php print $head; ?>
